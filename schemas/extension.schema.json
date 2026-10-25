@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tezbar external Rust extension schema 3",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "slug",
+    "version",
+    "runtime",
+    "execution",
+    "protocolVersion",
+    "commands",
+    "preferences",
+    "replaces",
+    "capabilities",
+    "artifacts"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 3
+    },
+    "runtime": {
+      "const": "rust"
+    },
+    "execution": {
+      "const": "process"
+    },
+    "protocolVersion": {
+      "const": 1
+    },
+    "id": {
+      "const": "com.tezbar.native.amphetamine"
+    },
+    "slug": {
+      "const": "amphetamine"
+    },
+    "commands": {
+      "type": "array"
+    },
+    "preferences": {
+      "type": "array"
+    },
+    "replaces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifacts": {
+      "type": "object"
+    },
+    "files": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "migrationPaths": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}
