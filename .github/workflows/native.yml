@@ -1,0 +1,45 @@
+name: Native build, test and package
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: ["feat/**", "fix/**", "main"]
+permissions:
+  contents: read
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: aarch64-apple-darwin
+            runner: macos-15
+            suffix: ""
+          - target: x86_64-pc-windows-msvc
+            runner: windows-2022
+            suffix: .exe
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify native runner architecture
+        run: python -c "import platform; expected='${{ matrix.target }}'; assert (platform.system() == 'Darwin' and platform.machine() == 'arm64') if expected.startswith('aarch64') else (platform.system() == 'Windows' and platform.machine().lower() in ['amd64', 'x86_64'])"
+      - name: Enforce immutable SDK publication pin
+        run: python -c "import runpy; runpy.run_path('scripts/package.py')['check_sdk']()"
+      - run: cargo fmt --check
+      - run: cargo test --locked -j1 --target ${{ matrix.target }} -- --test-threads=1
+      - run: cargo build --release --locked -j1 --target ${{ matrix.target }} --bin tezbar-amphetamine
+      - name: Package and verify root-layout ZIP and SHA inventory
+        run: python scripts/package.py --target ${{ matrix.target }} --binary target/${{ matrix.target }}/release/tezbar-amphetamine${{ matrix.suffix }}
+      - name: Verify packaged executable over real stdio (offline)
+        run: python scripts/smoke-package.py dist/amphetamine-${{ matrix.target }}.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amphetamine-${{ matrix.target }}
+          path: dist/*

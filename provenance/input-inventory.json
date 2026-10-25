@@ -1,0 +1,64 @@
+{
+  "appCommit": "fe71ca87f21ac4ff31505010c228f8abda0f2a89",
+  "files": [
+    {
+      "path": "src-tauri/src/native_core/extensions/v2_amphetamine.rs",
+      "size": 24493,
+      "sha256": "c54ead77b5691cd0f4ead4826e45d8b5de5d486c6ba382b765ca4ea040c2a0c7",
+      "originType": "app-git",
+      "originCommit": "fe71ca87f21ac4ff31505010c228f8abda0f2a89"
+    },
+    {
+      "path": "LICENSE",
+      "size": 10750,
+      "sha256": "0ed6b1b2760294d4aaaa45be38e166fcc0168e1dd5190423c096fcbe1c94afbf",
+      "originType": "app-git",
+      "originCommit": "fe71ca87f21ac4ff31505010c228f8abda0f2a89"
+    },
+    {
+      "path": "licenses/raycast-extensions-MIT.txt",
+      "size": 1064,
+      "sha256": "7f727f8b20cdd0e65f84e70b9cac2fce337dcecee4dc88955eb012ea27f02755",
+      "originType": "app-git",
+      "originCommit": "fe71ca87f21ac4ff31505010c228f8abda0f2a89"
+    },
+    {
+      "path": "manifest.v2.json",
+      "size": 3955,
+      "sha256": "87188fab10b70d044a4e8d069351e1da3359aa020c53ef423a0419ef4ae04672",
+      "originType": "catalog-selection",
+      "originCommit": "fe71ca87f21ac4ff31505010c228f8abda0f2a89"
+    },
+    {
+      "path": "provenance/installed-package.json",
+      "size": 3535,
+      "sha256": "cf64cfc0662ad18938d0bf33c383279f738763e1c6f0265cff225ae77fd3c611",
+      "originType": "local-read-only"
+    },
+    {
+      "path": "assets/icon.png",
+      "size": 62158,
+      "sha256": "750ea26eee81ede20aab1c9cf87e66556b08700baafc3a72488abe340cc75962",
+      "originType": "local-read-only"
+    },
+    {
+      "path": "provenance/upstream-directory.json",
+      "size": 11248,
+      "sha256": "092816c2d31b0de2f59e6c06adc64230a39fa02642881386bfa3ace9204472a3",
+      "originType": "github-api",
+      "originCommit": "97ee2594a03a94fa439c26864d85ad9a96dc9fc9"
+    },
+    {
+      "path": "provenance/current-upstream/package.json",
+      "size": 3536,
+      "sha256": "204a906f088e2d3bffecede36ff9a2a844b48e71150a842d9c34d61841c84d5c",
+      "originType": "https"
+    },
+    {
+      "path": "provenance/current-upstream/repository-LICENSE",
+      "size": 1064,
+      "sha256": "7f727f8b20cdd0e65f84e70b9cac2fce337dcecee4dc88955eb012ea27f02755",
+      "originType": "https"
+    }
+  ]
+}

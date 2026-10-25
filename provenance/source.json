@@ -1,0 +1,52 @@
+{
+  "slug": "amphetamine",
+  "status": "source-inputs-only",
+  "standalone": false,
+  "source_pack_complete_for_research": true,
+  "repository": "almatkai/amphetamine",
+  "repository_exists_at_inventory": false,
+  "repository_visibility": null,
+  "repository_proposed_name": "amphetamine",
+  "publish_allowed": "not-approved; research inputs need integration/license review",
+  "app_base": "fe71ca87f21ac4ff31505010c228f8abda0f2a89",
+  "app_branch": "fix/beta15-external-rust-extensions",
+  "source_sha256": "c54ead77b5691cd0f4ead4826e45d8b5de5d486c6ba382b765ca4ea040c2a0c7",
+  "source_module": "src-tauri/src/native_core/extensions/v2_amphetamine.rs",
+  "manifest": "manifest.v2.json",
+  "manifest_icon_original_copied": true,
+  "manifest_asset_references": [
+    "icon.png"
+  ],
+  "actual_missing_assets": [],
+  "commands": 5,
+  "runtime_validation": "not-run",
+  "remaining_port_couplings": "Process-global keep-awake actor, OS assertions, explicit shutdown and host view/session contract; not the Amphetamine app.",
+  "host_request_routes": [],
+  "sdk_functions": [
+    "no_view",
+    "unchanged",
+    "view"
+  ],
+  "license_notices": [
+    "App LICENSE retained exactly (Apache-2.0, existing Almat notice); retain Raycast MIT and original author/contributor metadata; not one license for all third-party assets. Original icons preserved; no trademark grant or independent authorship invented."
+  ],
+  "installed_public_metadata": {
+    "author": "gstvds",
+    "contributors": [
+      "mike_dloss",
+      "ceyhuncicek"
+    ],
+    "license": "MIT",
+    "version": "1.1.1"
+  },
+  "installed_upstream_exact_commit": "unknown",
+  "upstream_snapshot": {
+    "slug": "amphetamine",
+    "repository": "raycast/extensions",
+    "snapshot_commit": "97ee2594a03a94fa439c26864d85ad9a96dc9fc9",
+    "installed_exact_upstream_commit": "unknown",
+    "extension_path": "extensions/amphetamine",
+    "errors": []
+  },
+  "existing_repository_upstream": null
+}

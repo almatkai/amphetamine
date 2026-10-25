@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 3,
+  "id": "com.tezbar.native.amphetamine",
+  "slug": "amphetamine",
+  "name": "Amphetamine",
+  "version": "1.1.1",
+  "description": "Keep your computer awake with native Tezbar sessions",
+  "author": "gstvds",
+  "icon": "resources/assets/icon.png",
+  "runtime": "rust",
+  "replaces": [
+    "raycast.amphetamine"
+  ],
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "preferences": [],
+  "commands": [
+    {
+      "name": "amp-start",
+      "title": "Start New Session",
+      "description": "Start a new default session",
+      "mode": "no-view",
+      "keywords": [
+        "start",
+        "amp",
+        "amp start",
+        "amphetamine",
+        "ampstart"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "concurrency": "serialize",
+      "refreshMs": null
+    },
+    {
+      "name": "quick-start",
+      "title": "Quick Start Session",
+      "description": "Start a keep-awake session by typing the duration inline; leave all fields empty for a session with no time limit",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "hours",
+          "type": "text",
+          "placeholder": "Hours (empty = no limit)",
+          "required": false
+        },
+        {
+          "name": "minutes",
+          "type": "text",
+          "placeholder": "Minutes",
+          "required": false
+        },
+        {
+          "name": "seconds",
+          "type": "text",
+          "placeholder": "Seconds",
+          "required": false
+        }
+      ],
+      "preferences": [
+        {
+          "name": "displaySleepAllowed",
+          "type": "checkbox",
+          "required": false,
+          "default": false,
+          "title": "Display Sleep",
+          "label": "Allow the display to sleep during the session",
+          "description": "When enabled, the session keeps the Mac awake but lets the display turn off."
+        }
+      ],
+      "keywords": [
+        "quick",
+        "amp",
+        "amp quick",
+        "amphetamine",
+        "start",
+        "duration"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "concurrency": "serialize",
+      "refreshMs": null
+    },
+    {
+      "name": "amp-end",
+      "title": "End Current Session",
+      "description": "End the current session",
+      "mode": "no-view",
+      "keywords": [
+        "end",
+        "amp",
+        "amp end",
+        "amphetamine",
+        "ampend"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "concurrency": "serialize",
+      "refreshMs": null
+    },
+    {
+      "name": "remaining",
+      "title": "Get Remaining Time",
+      "description": "Get current session remaining time",
+      "mode": "no-view",
+      "keywords": [
+        "remaining",
+        "amp",
+        "amp remaining",
+        "amphetamine"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "concurrency": "serialize",
+      "refreshMs": null
+    },
+    {
+      "name": "amp-duration",
+      "title": "Configure New Session",
+      "description": "Start a new session with a duration or until a specific time",
+      "mode": "view",
+      "keywords": [
+        "interval",
+        "amp",
+        "amp interval",
+        "amphetamine",
+        "duration",
+        "time",
+        "until",
+        "amp duration",
+        "amp time",
+        "amp until"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "concurrency": "serialize",
+      "refreshMs": null
+    }
+  ],
+  "verification": [
+    {
+      "platform": "macOS",
+      "state": "not-run"
+    },
+    {
+      "platform": "Windows",
+      "state": "not-run"
+    }
+  ],
+  "execution": "process",
+  "protocolVersion": 1,
+  "repository": "https://github.com/almatkai/amphetamine",
+  "artifacts": {},
+  "capabilities": [
+    "background"
+  ],
+  "migrationPaths": {
+    "nativeStore": "native-extensions-v2/amphetamine/storage.json"
+  },
+  "files": {}
+}

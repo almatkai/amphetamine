@@ -1,0 +1,10 @@
+Amphetamine standalone Rust extension
+
+Rust domain source extracted from Tezbar at fe71ca87f21ac4ff31505010c228f8abda0f2a89.
+Retain the original Apache-2.0 app LICENSE and licenses/raycast-extensions-MIT.txt.
+Installed Raycast extension author: gstvds; contributors: mike_dloss, ceyhuncicek.
+Original installed upstream revision is unknown. The separate upstream metadata
+snapshot 97ee2594a03a94fa439c26864d85ad9a96dc9fc9 is context, not a claim that the
+installed assets originated at that commit. See provenance/source.json and
+provenance/upstream/installed-package.json for author/contributor metadata.
+Original icons and resources are preserved. No trademark rights are claimed.
